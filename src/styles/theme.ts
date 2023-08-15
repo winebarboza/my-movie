@@ -5,9 +5,9 @@ export const theme = {
     large: '992px',
     extraLarge: '1200px',
   },
-    colors: {
-      white: '#FFFFFF',
-      grey: '#A6A6A6',
-      backgroundColor: '#1E1E1E',
-    },
-  };
+  colors: {
+    white: '#FFFFFF',
+    grey: '#A6A6A6',
+    backgroundColor: '#1E1E1E',
+  },
+};

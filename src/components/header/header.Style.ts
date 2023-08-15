@@ -9,11 +9,15 @@ export const HeaderContent = styled.div`
     height: 3%;
 `;
 export const Div = styled.div`
-    margin: auto;
+    width: 38rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
 `;
 
 export const Logo = styled.img`
-    width: 10%;
+    width: 8%;
 `;
 
 //componentes do materia ui estilizados
@@ -22,6 +26,7 @@ export const InputStyled = styled(Input)`
     padding: 5px;
     width: 30rem;
     background-color: #7e7b7b71;
+    border-radius: 4px;
 `;
 
 export const ButtonStyled = styled(Button)`

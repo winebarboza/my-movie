@@ -3,6 +3,7 @@ import Header from '../components/header';
 import backgroundImg from '../assets/background1.png';
 import { BackgroundImg } from './initialPage.Style';
 import { Container } from '@mui/material';
+import CardMovie from '../components/movie-card';
 
 function InitialPage() {
   return (
@@ -12,7 +13,7 @@ function InitialPage() {
       </Container>
       <BackgroundImg backgroundImage={backgroundImg} >
         <Container>
-           {/* cards */}
+          <CardMovie />
         </Container>
       </BackgroundImg>
     </div>

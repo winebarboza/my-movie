@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface BackgroundImgProps {
-  backgroundImage: any;
+    backgroundImage: any;
 }
 
 export const BackgroundImg = styled.div<BackgroundImgProps>`
