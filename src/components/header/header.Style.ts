@@ -20,7 +20,7 @@ export const Logo = styled.img`
 
 export const InputStyled = styled(Input)`
     padding: 5px;
-    width: 25rem;
+    width: 30rem;
     background-color: #7e7b7b71;
 `;
 
