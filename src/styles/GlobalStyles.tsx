@@ -12,10 +12,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${theme.colors.backgroundColor};
     }
     h1, h3, h4, p{
-        color: ${theme.colors.textColorWhite};
-    }
-    h2{
-        color: ${theme.colors.greenTheme};
+        color: ${theme.colors.white};
     }
     button, input{
         border: none;
