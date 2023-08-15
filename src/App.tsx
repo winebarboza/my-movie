@@ -7,9 +7,9 @@ function App() {
     <div className="App">
       <GlobalStyles/>
       <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<InitialPage/>}/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<InitialPage/>}/>
+        </Routes>
       </BrowserRouter>
     </div>
   );
