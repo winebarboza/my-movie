@@ -1,6 +1,6 @@
 import React from 'react'
 import LogoHeader from '../../assets/logo.png'
-import { HeaderContent, Logo, Div, InputStyled, ButtonStyled } from './header.Style'
+import { HeaderContent, Logo, Div, InputStyled, ButtonStyled } from './header.style'
 import { grey } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
