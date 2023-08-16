@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/header';
 import backgroundImg from '../assets/background1.png';
-import { BackgroundImg } from './initialPage.Style';
+import { BackgroundImg } from './initialPage.style';
 import { Container } from '@mui/material';
 import CardMovie from '../components/movie-card';
 import useGetMovies from './hooks/useGetMovies';
