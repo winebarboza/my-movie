@@ -4,8 +4,9 @@ import backgroundImg from '../assets/background1.png';
 import { BackgroundImg } from './initialPage.Style';
 import { Container } from '@mui/material';
 import CardMovie from '../components/movie-card';
-
+import useGetMovies from './hooks/useGetMovies';
 function InitialPage() {
+  const movies = useGetMovies("/movie/popular?api_key=8e1d2d15df8ebdf9dc053c78b92de5c3")
   return (
     <div>
       <Container>
@@ -13,7 +14,7 @@ function InitialPage() {
       </Container>
       <BackgroundImg backgroundImage={backgroundImg} >
         <Container>
-          <CardMovie />
+          <CardMovie movies={movies} />
         </Container>
       </BackgroundImg>
     </div>

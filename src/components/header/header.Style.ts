@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button, Input} from '@mui/material';
+import { Button, Input } from '@mui/material';
 
 export const HeaderContent = styled.div`
     display: flex;
