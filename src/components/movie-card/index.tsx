@@ -1,6 +1,6 @@
 import React from 'react'
-import { CardStyled, CardMediaStyled } from './movieCard.Style'
-import { CardActionArea, CardContent, Typography } from '@mui/material'
+import { CardStyled, CardMediaStyled, ButtonStyled } from './movieCard.style'
+import { CardActionArea, CardActions, CardContent, Typography, Button } from '@mui/material'
 import { Movie } from '../../models/movie.interface'
 
 interface CardMovieProps {
@@ -12,15 +12,17 @@ const CardMovie: React.FC<CardMovieProps> = ({ movies }) => {
             {movies.map((movie) => (
                 <CardStyled key={movie.id}>
                     <CardActionArea >
-                        <CardMediaStyled src={movie.poster_path}/>
+                       <CardMediaStyled src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title} />
                         <CardContent>
                             <Typography variant='h6' style={{ color: '#CCCCCC' }}>
                                 {movie.title}
                             </Typography>
-                            <Typography variant='subtitle2' style={{ color: '#CCCCCC' }}>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique praesentiu.
-                            </Typography>
                         </CardContent>
+                        <CardActions>
+                            <ButtonStyled size="small">
+                                Ver mais
+                            </ButtonStyled>
+                        </CardActions>
                     </CardActionArea>
                 </CardStyled>
             ))}
