@@ -10,8 +10,10 @@ export const GlobalStyles = createGlobalStyle`
         padding:0;
         margin: 0;
         background-color: ${theme.colors.backgroundColor};
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
-    h1, h3, h4, p{
+    h1, h2, h3, h4, p{
         color: ${theme.colors.white};
     }
     button, input{
