@@ -1,16 +1,21 @@
 import styled from 'styled-components'
-import { Card, Button} from '@mui/material'
+import { Card, Typography } from '@mui/material'
 
 export const CardStyled = styled(Card)`
-    width: 15rem;
-    height: 20rem;
+    width: 14rem;
+    height: 15rem;
     display: flex;
+    @media (max-width: 480px) {
+         height:30rem;
+        }
 `
-export const ButtonStyled = styled(Button)`
-    
+export const TypographyStyled = styled(Typography)`
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: gray;
 `
+
 export const CardMediaStyled = styled.img`
     width: 100%;
-    height: 60%;
-    border: 1px solid wihte;
+    height: 70%;
 `
