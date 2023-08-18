@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { Card, Typography } from '@mui/material'
 
 export const CardStyled = styled(Card)`
-    width: 14rem;
-    height: 15rem;
+    width: 12rem;
+    height: 18rem;
     display: flex;
     @media (max-width: 480px) {
          height:30rem;
@@ -16,6 +16,6 @@ export const TypographyStyled = styled(Typography)`
 `
 
 export const CardMediaStyled = styled.img`
-    width: 100%;
-    height: 70%;
+    width:100%;
+    height:63%;
 `
