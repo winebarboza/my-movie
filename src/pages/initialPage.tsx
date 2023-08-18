@@ -11,14 +11,15 @@ function InitialPage() {
   const movies = useGetMovies("/movie/popular?api_key=8e1d2d15df8ebdf9dc053c78b92de5c3")
 
   const [filteredMovies, setFilteredMovies] = useState<Movie[]>([]);
+  const [inputMovie, setInputMovie] = useState("");
 
-  const handleFilteredItems = (inputValue: string) =>
+  const handleFilteredItems = (inputValue: string) =>{
+    setInputMovie(inputValue)
     setFilteredMovies(movies.filter(movie =>
-      movie.title.toLowerCase().includes(inputValue.toLowerCase())
-    ));
-    if(filteredMovies.length === 0 && filteredMovies.length <7){
+    movie.title.toLowerCase().includes(inputValue.toLowerCase())
+  ))};
+  
 
-    }
   return (
     <div>
       <Container>
@@ -26,7 +27,7 @@ function InitialPage() {
       </Container>
       <BackgroundImg backgroundImage={backgroundImg} >
         <Container>
-          <CardMovie filteredMovies={filteredMovies} movies={movies} />
+          <CardMovie filteredMovies={filteredMovies} movies={movies} inputMovie={inputMovie} />
         </Container>
       </BackgroundImg>
     </div>
