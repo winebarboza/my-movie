@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Movie, MovieApiResponse } from "../../models/movie.interface";
 import api from "../../providers";
+
 const useGetMovies = (endpoint: string) => {
 
     const [movies, setMovies] = useState<Movie[]>([]);
+    
     useEffect(() => {
         const fetchMovies = async () => {
             try {
