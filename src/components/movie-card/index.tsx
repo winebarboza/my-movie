@@ -3,8 +3,9 @@ import PopularMovie from '../section'
 import { Movie } from '../../models/movie.interface'
 import { CardStyled, CardMediaStyled, TypographyStyled } from './movieCard.style'
 import { CardActionArea, CardContent } from '@mui/material'
+import { Skeleton } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import { useSearchMovie } from './hooks/useSearchMovie'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -14,10 +15,13 @@ import './swiper.style.css';
 interface CardMovieProps {
     movies: Movie[];
     filteredMovies: Movie[];
+    inputMovie: string;
 }
 
-const CardMovie: React.FC<CardMovieProps> = ({ movies, filteredMovies }) => {
-    
+const CardMovie: React.FC<CardMovieProps> = ({ movies, filteredMovies, inputMovie }) => {
+    const moviesFilteredApi = useSearchMovie(inputMovie)
+    const combinedMovies = moviesFilteredApi.concat(movies);
+    const combinedMovies2 = filteredMovies.concat(combinedMovies);
     return (
         <div>
             <PopularMovie />
@@ -39,24 +43,26 @@ const CardMovie: React.FC<CardMovieProps> = ({ movies, filteredMovies }) => {
                          }}
                  className="mySwiper"
             >
-                {movies.map((movie) => (
-                    <SwiperSlide>
-                        <CardStyled
-                            sx={{ background: '#202123' }}
-                            key={movie.id}>
-                            <CardActionArea>
-                                <CardMediaStyled
-                                    src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-                                    alt={movie.title}
-                                     />
-                                <CardContent sx={{height:'30%'}}>
+                {combinedMovies2.map((movie) => (
+                    <SwiperSlide key={movie.id}>
+                    <CardStyled sx={{ background: '#202123' }}>
+                        <CardActionArea>
+                            <CardMediaStyled
+                                src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                                alt={movie.title}
+                            />
+                            <CardContent sx={{ height: '30%' }}>
+                                {movie.title ? (
                                     <TypographyStyled>
                                         {movie.title}
                                     </TypographyStyled>
-                                </CardContent>
-                            </CardActionArea>
-                        </CardStyled>
-                    </SwiperSlide>
+                                ) : (
+                                    <Skeleton height={30} width="80%" />
+                                )}
+                            </CardContent>
+                        </CardActionArea>
+                    </CardStyled>
+                </SwiperSlide>
                 ))}
             </Swiper>
         </div>
