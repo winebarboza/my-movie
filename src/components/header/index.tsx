@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LogoHeader from '../../assets/logo.png'
+import { Movie } from '../../models/movie.interface';
 import { HeaderContent, Logo, Div, InputStyled, ButtonStyled } from './header.style'
 import { grey } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -10,14 +11,32 @@ const theme = createTheme({
   },
 });
 
-function Header() {
+interface HeaderProps {
+  movies: Movie[];
+  handleFilteredItems: (value: string) => void;
+};
+
+const Header: React.FC<HeaderProps> = ({ movies, handleFilteredItems }) => {
+
+  let [inputValue, setInputValue] = useState('');
+
+  const handleInputvalue = (event: any) => {
+    setInputValue(event.target.value)
+  }
+
   return (
     <HeaderContent>
       <Logo src={LogoHeader} />
       <Div>
         <ThemeProvider theme={theme}>
-          <InputStyled color='primary' style={{ color: 'white' }} />
-          <ButtonStyled variant="outlined">Buscar</ButtonStyled>
+          <InputStyled
+            type='text'
+            name='movie'
+            value={inputValue}
+            onChange={handleInputvalue}
+            color='primary'
+            style={{ color: 'white' }} />
+          <ButtonStyled variant="outlined" onClick={() => handleFilteredItems(inputValue)}>Buscar</ButtonStyled>
         </ThemeProvider>
       </Div>
     </HeaderContent>
