@@ -1,47 +1,65 @@
-# Getting Started with Create React App
+# MyMovie - catálogo de filmes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Catálogo de filmes desenvolvido em ReactJs e TypeScript em conjunto com a API do [TMDb](https://www.themoviedb.org/), nesse projeto o usuário consegue pesquisar filmes e ver mais detalhes sobre eles como data de lançamento, média de votos e sinopse.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Demonstração
 
-### `npm start`
+### [Link da aplicação](link)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![screen-gif](./public/assets/gif-demonstracao.gif)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias utilizadas
 
-### `npm run build`
+![My Skills](https://skills.thijs.gg/icons?i=html,css,typescript,react,styledcomponents,materialui)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Siga as etapas abaixo para clonar o projeto e instalar as dependências necessárias:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.Certifique-se de ter o Node.js instalado em sua máquina.
 
-### `npm run eject`
+2.Clone este repositório para o seu ambiente local:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+ git clone https://github.com/winebarboza/discografia.git
+```
+3.Navegue para o diretório do projeto:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd discografia
+```
+Instale as dependências do projeto com o gerenciador de pacotes npm ou Yarn:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Usando npm:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm install
+```
+Usando yarn:
 
-## Learn More
+```bash
+yarn install
+```
+## Executando o Projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para executar o projeto localmente, siga as etapas abaixo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# my-movie
+Certifique-se de estar no diretório raiz do projeto (onde o arquivo package.json está localizado).
+
+Execute o seguinte comando com o gerenciador de pacotes escolhido:
+
+Usando npm:
+
+```bash
+npm start
+```
+Usando yarn:
+```
+yarn start
+```
+O aplicativo será aberto automaticamente no seu navegador padrão em http://localhost:3000/. Se não abrir automaticamente, basta digitar esse endereço no seu navegador.
