@@ -26,12 +26,12 @@ Siga as etapas abaixo para clonar o projeto e instalar as dependências necessá
 2.Clone este repositório para o seu ambiente local:
 
 ```bash
- git clone https://github.com/winebarboza/discografia.git
+ git clone https://github.com/winebarboza/my-movie.git
 ```
 3.Navegue para o diretório do projeto:
 
 ```bash
-cd discografia
+cd my-movie
 ```
 Instale as dependências do projeto com o gerenciador de pacotes npm ou Yarn:
 
