@@ -6,6 +6,7 @@ import { CardActionArea, CardContent } from '@mui/material'
 import { Skeleton } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useSearchMovie } from './hooks/useSearchMovie'
+import { Link } from 'react-router-dom'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -19,6 +20,7 @@ interface CardMovieProps {
 }
 
 const CardMovie: React.FC<CardMovieProps> = ({ movies, filteredMovies, inputMovie }) => {
+
     const moviesFilteredApi = useSearchMovie(inputMovie)
     const combinedMovies = moviesFilteredApi.concat(movies);
     const combinedMovies2 = filteredMovies.concat(combinedMovies);
@@ -47,6 +49,7 @@ const CardMovie: React.FC<CardMovieProps> = ({ movies, filteredMovies, inputMovi
                     <SwiperSlide key={movie.id}>
                     <CardStyled sx={{ background: '#202123' }}>
                         <CardActionArea>
+                        <Link to={`/movie/${movie.id}`}>
                             <CardMediaStyled
                                 src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                                 alt={movie.title}
@@ -60,6 +63,7 @@ const CardMovie: React.FC<CardMovieProps> = ({ movies, filteredMovies, inputMovi
                                     <Skeleton height={30} width="80%" />
                                 )}
                             </CardContent>
+                            </Link>
                         </CardActionArea>
                     </CardStyled>
                 </SwiperSlide>
