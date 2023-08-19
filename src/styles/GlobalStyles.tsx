@@ -30,4 +30,9 @@ export const GlobalStyles = createGlobalStyle`
     a{
         text-decoration: none;
     }
+    @media (max-width: 768px) {
+        body {
+            overflow-x: hidden; /* Remover overflow horizontal */
+            overflow-y: hidden; /* Remover overflow vertical */
+    }}
 `
