@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import LogoHeader from '../../assets/logo.png'
 import { Movie } from '../../models/movie.interface';
-import { HeaderContent, Logo, Div, InputStyled, ButtonStyled } from './header.style'
+import { HeaderContent, Logo, Div, InputStyled, ButtonStyled } from './styles'
 import { grey } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
 const theme = createTheme({
   palette: {
     primary: grey
@@ -26,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ movies, handleFilteredItems }) => {
 
   return (
     <HeaderContent>
-      <Logo src={LogoHeader} />
+        <Logo src={LogoHeader} onClick={() => window.location.reload()}/>
       <Div>
         <ThemeProvider theme={theme}>
           <InputStyled

@@ -1,5 +1,5 @@
 import React from 'react'
-import { MovieSectionStyled } from './section.style'
+import { MovieSectionStyled } from './styles'
 export default function PopularMovie() {
     return (
         <div>

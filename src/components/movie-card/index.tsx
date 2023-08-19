@@ -1,16 +1,17 @@
 import React from 'react'
 import PopularMovie from '../section'
 import { Movie } from '../../models/movie.interface'
-import { CardStyled, CardMediaStyled, TypographyStyled } from './movieCard.style'
+import { CardStyled, CardMediaStyled, TypographyStyled } from './styles'
 import { CardActionArea, CardContent } from '@mui/material'
 import { Skeleton } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useSearchMovie } from './hooks/useSearchMovie'
 import { Link } from 'react-router-dom'
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './swiper.style.css';
+import './swiper.styles.css';
 
 //type 
 interface CardMovieProps {
@@ -28,6 +29,7 @@ const CardMovie: React.FC<CardMovieProps> = ({ movies, filteredMovies, inputMovi
         <div>
             <PopularMovie />
             <Swiper
+                 direction="horizontal"
                  slidesPerView={10}
                  spaceBetween={4}
                  pagination={{
@@ -35,13 +37,18 @@ const CardMovie: React.FC<CardMovieProps> = ({ movies, filteredMovies, inputMovi
                  }}
                  breakpoints={{
                              320: {
-                                 slidesPerView: 2,
-                                 spaceBetween: 5
+                                 direction: 'vertical',
+                                 slidesPerView: 1,
+                                 spaceBetween: 40
                              },
                              480: {
-                                 slidesPerView: 7,
+                                 slidesPerView: 5,
                                  spaceBetween: 5
                              },
+                             1366: {  
+                                slidesPerView: 7,
+                                spaceBetween: 5,
+                              },
                          }}
                  className="mySwiper"
             >
