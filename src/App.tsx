@@ -1,6 +1,6 @@
 import React from 'react';
-import InitialPage from './pages/initial-page/initialPage';
-import MovieDetailsPage from './pages/movie-details/movieDetails';
+import InitialPage from './pages/initial-page/index';
+import MovieDetailsPage from './pages/movie-details/index';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
