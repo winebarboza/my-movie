@@ -57,7 +57,9 @@ export default function MovieDetailsPage() {
                                     {movieDetail.original_title}
                                 </Typography>
                                 <Typography variant="body2" color="#808080">
-                                    {movieDetail.release_date}
+                                    {new Intl.DateTimeFormat("pt-br", {
+                                        dateStyle: "short",
+                                    }).format(new Date(movieDetail.release_date))}
                                 </Typography>
                                 <Typography variant="body2" color="#c5c0c0">
                                     {movieDetail.overview}
