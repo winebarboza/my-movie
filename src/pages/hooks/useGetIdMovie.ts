@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Movie, MovieApiResponse } from "../../models/movie.interface";
+import { Movie} from "../../models/movie.interface";
 import api from "../../providers";
 
 const useGetIdMovies = (id: number) => {
