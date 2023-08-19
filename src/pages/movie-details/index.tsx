@@ -27,7 +27,7 @@ export default function MovieDetailsPage() {
                     minHeight="100vh"
                 >
                     <div style={{ marginLeft: '10', textAlign: 'center' }}>
-                        <Skeleton variant="rectangular" width={600} height={400} />
+                        <Skeleton variant="rectangular" width={500} height={300} />
                         <Skeleton variant="text" width={100} height={30} />
                         <Skeleton variant="text" width={100} height={20} />
                         <Skeleton variant="text" width={300} height={60} />
