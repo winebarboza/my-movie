@@ -5,7 +5,7 @@ import api from "../../providers";
 
 const useGetIdMovies = (id: number) => {
 
-    const [movieDetail, setMovieDetail] = useState<Movie>({} as Movie);
+    const [movieDetail, setMovieDetail] = useState<Movie | null>(null);
     
     useEffect(() => {
         const fetchMoviesDetails = async () => {
