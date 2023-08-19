@@ -1,4 +1,3 @@
-// https://api.themoviedb.org/3/movie/${id}?api_key=8e1d2d15df8ebdf9dc053c78b92de5c3&
 import { useState, useEffect } from "react";
 import { Movie, MovieApiResponse } from "../../models/movie.interface";
 import api from "../../providers";
