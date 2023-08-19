@@ -10,9 +10,8 @@ const useGetIdMovies = (id: number) => {
     useEffect(() => {
         const fetchMoviesDetails = async () => {
             try {
-                const response = await api.get<Movie>( `https://api.themoviedb.org/3/movie/${id}?api_key=8e1d2d15df8ebdf9dc053c78b92de5c3`);
+                const response = await api.get<Movie>( `/movie/${id}?api_key=8e1d2d15df8ebdf9dc053c78b92de5c3`);
                 setMovieDetail(response.data)
-                console.log(movieDetail.backdrop_path)
             } catch (error) {
                 console.error("error fetching movies", error)
             }
