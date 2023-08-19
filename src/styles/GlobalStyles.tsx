@@ -18,6 +18,11 @@ export const GlobalStyles = createGlobalStyle`
     }
     button, input{
         border: none;
+
+        textarea:focus, input:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+        }
     }
     button{
         cursor: pointer;
