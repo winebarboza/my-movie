@@ -1,23 +1,32 @@
-import { HeaderContent, Logo } from '../../components/header/styles'
-import { CardActionArea, Container } from '@mui/material'
+import React from 'react';
+import { HeaderContent, Logo } from '../../components/header/styles';
+import { CardActionArea, Container } from '@mui/material';
 import { CardMediaStyled } from './styles';
-import LogoHeader from '../../assets/logo.png'
+import LogoHeader from '../../assets/logo.png';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
+import Skeleton from '@mui/material/Skeleton';
 import useGetIdMovies from '../hooks/useGetIdMovie';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default function MovieDetailsPage() {
-
     const { id } = useParams();
-    const movieDetail = useGetIdMovies(Number(id))
+    const movieDetail = useGetIdMovies(Number(id));
 
+    if (!movieDetail) {
+        return (
+            <div>
+                <Skeleton variant="rectangular" height={200} />
+                <Skeleton variant="text" width={200} height={30} />
+                <Skeleton variant="text" width={100} height={20} />
+                <Skeleton variant="text" width={300} height={60} />
+                <Skeleton variant="rectangular" height={30} width={120} />
+            </div>
+        );
+    }
     return (
         <div>
             <HeaderContent>
@@ -50,5 +59,5 @@ export default function MovieDetailsPage() {
                 </Card>
             </Container>
         </div>
-    )
+    );
 }
