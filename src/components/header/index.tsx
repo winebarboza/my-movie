@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import LogoHeader from '../../assets/logo.png'
-// import { Movie } from '../../models/movie.interface';
 import { HeaderContent, Logo, Div, InputStyled, ButtonStyled } from './styles'
 import { grey } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
