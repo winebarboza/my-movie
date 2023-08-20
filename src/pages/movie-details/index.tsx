@@ -70,7 +70,7 @@ export default function MovieDetailsPage() {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                )};
+                )}
             </Container>
         </div>
     );
